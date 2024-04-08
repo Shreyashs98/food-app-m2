@@ -1,0 +1,83 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-3">Order </h1>
+    
+    <!-- Featured recipes section -->
+    <div class="row mt-5">
+      <div class="col-md-4 " style="border-radius: 20px;">
+        <div class="card" style="box-shadow: 10px 10px  25px grey; border-radius: 20px; ">
+          <img src="https://img.freepik.com/free-photo/fresh-pasta-with-hearty-bolognese-parmesan-cheese-generated-by-ai_188544-9469.jpg"  style="border-top-left-radius: 20px;border-top-right-radius: 20px;" class="card-img-top" alt="Recipe 1">
+          <div class="card-body">
+            <h5 class="card-title">Specialty Dish</h5>
+            <p class="card-text">Our signature Specialty Dish order Here</p>
+            <a href="#" class="btn btn-primary">Price: 999</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="border-radius: 20px;">
+        <div class="card" style="box-shadow: 10px 10px  25px grey;border-radius: 20px;">
+          <img src="https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg" 
+          style="border-top-left-radius: 20px;border-top-right-radius: 20px;"
+          class="card-img-top" alt="Recipe 1">
+          <div class="card-body">
+            <h5 class="card-title">Signature Dessert</h5>
+            <p class="card-text">Our signature dessert order Here</p>
+            <a href="#" class="btn btn-primary">Price: 499</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="border-radius: 20px;">
+        <div class="card" style="box-shadow: 10px 10px  25px grey; border-radius: 20px;">
+          <img src="https://c4.wallpaperflare.com/wallpaper/234/543/684/food-pizza-wallpaper-preview.jpg" style="border-top-left-radius: 20px;border-top-right-radius: 20px;"  class="card-img-top" alt="Recipe 3">
+          <div class="card-body">
+            <h5 class="card-title">Healthy Delight</h5>
+            <p class="card-text">Our signature Healthy Delight order Here</p>
+            <a href="#" class="btn btn-primary">Price: 1999</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of featured recipes section -->
+
+    <!-- Add the new form for submitting feedback, image, and text file -->
+    
+    <form action="/feedback" method="post" enctype="multipart/form-data" class="mt-4">
+        
+    <h5 class="lead">Share your feedback.</h5>
+      <div class="form-group">
+        <label for="orderId">Order ID:</label>
+        <input type="string" id="orderId" name="orderId"  required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="rating">Feedback (1 to 5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="textFile">Upload Text File:</label>
+        <input type="file" id="textFile" name="textFile" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-dark btn-lg btn-block">Submit files</button>
+    </form>
+    <!-- End of the new form -->
+    <!-- End of newsletter subscription form -->
+    <div class="row mt-4">
+        <div class="col-md-6 mb-3">
+            <a class="btn btn-primary btn-lg btn-block" href="/track-order" role="button">Track Order</a>
+          </div>
+      <div class="col-md-6 mb-3">
+        <a class="btn btn-light btn-lg btn-block" href="/logout" role="button">Log Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
