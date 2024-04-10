@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
   email: String,
   password: String,
   googleId: String,
@@ -8,7 +9,8 @@ const userSchema = new mongoose.Schema({
   otp: String,
 }, { timestamps: true });
 
-const foodSchema = new mongoose.Schema({
+const foodSchema = new mongoose.Schema(
+  {
   id: String,
   name: String,
   description: String,
@@ -17,7 +19,8 @@ const foodSchema = new mongoose.Schema({
   category: { type: String, enum: ["veg", "non-veg", "dessert"], default: "non-veg"},
 }, { timestamps: true });
 
-const orderSchema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema(
+  {
   foodId: String,
   userId: String,
   orderId: String,
